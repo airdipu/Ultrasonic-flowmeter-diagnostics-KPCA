@@ -39,3 +39,8 @@ Meter B contains 92 instances of diagnostic parameters for a 4-path liquid USM. 
 (52) -- Class attribute or health state of meter: 1,2,3
 
 
+Relevant Papers:
+
+K. S. Gyamfi, J. Brusey, A. Hunt, E. Gaura , â€œLinear dimensionality reduction for classification via a sequential Bayes error minimisation with an application to flow meter diagnostics,â€ Expert Systems with Applications (IF: 3.928), September 2017
+
+
