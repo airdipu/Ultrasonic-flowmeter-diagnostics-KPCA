@@ -9,9 +9,13 @@ Meter B contains 92 instances of diagnostic parameters for a 4-path liquid USM. 
   
 
 (1) -- Profile factor 
+
 (2) -- Symmetry 
+
 (3) -- Crossflow 
+
 (4) -- Swirl angle 
+
 (5)-(8) -- Flow velocity in each of the four paths 
 (9) -- Average flow velocity in all four paths 
 (10)-(13) -- Speed of sound in each of the four paths 
