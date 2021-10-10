@@ -1,7 +1,7 @@
 dataset = readtable('Meter-B.txt', 'ReadVariableNames', false);
 data = table2array(dataset);
 
-markers = ["k.", "ro", "y"];
+markers = ["ro", "k.", "go"];
 % Separation of prediction set
 X = data(:, 1:51);
 Y = data(:, 52);
@@ -25,17 +25,29 @@ for i = 1:length(Y)
 end
 
 
+% Fitting the model
+kerneltype = ' gaussian';
+kernel = Kernel('type', 'gaussian', 'gamma', 2);
+%kernel = Kernel('type', 'polynomial', 'degree', 2);
+%kernel = Kernel('type', 'linear');
+%kernel = Kernel('type', 'sigmoid', 'gamma', 2);
+%kernel = Kernel('type', 'laplacian', 'gamma', 2);
 
-    
-% Cross validation (train: 70%, test: 30%)
-%cv = cvpartition(size(data, 1), 'HoldOut', 0.3);
-%idx = cv.test;
+parameter = struct('numComponents',2, ...
+                    'kernelFunc', kernel);
+kpca = KernelPCA(parameter);
+model = kpca.train(X);
 
-%Train = data(~idx,:);
-%Test = data(idx,:);
-%Train = zscore(Train);          % Standardaization
 
-%xTrain = zscore(Train(:, 1:51));
-%yTrain = Train(:, 52);
-%xTest = Test(:, 1:51);
-%yTest = Test(:, 52);
+KPCAScores = kpca.score;
+
+figure
+title(strcat("KPCA Biplot", kerneltype));
+hold on
+for i = 1:length(Y)
+    plot(KPCAScores(idx1, 1), KPCAScores(idx1, 2), markers(1));
+    plot(KPCAScores(idx2, 1), KPCAScores(idx2, 2), markers(2));
+    plot(KPCAScores(idx3, 1), KPCAScores(idx3, 2), markers(3));
+end
+
+
