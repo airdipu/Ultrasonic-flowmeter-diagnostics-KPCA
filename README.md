@@ -44,3 +44,16 @@ Relevant Papers:
 K. S. Gyamfi, J. Brusey, A. Hunt, E. Gaura , â€œLinear dimensionality reduction for classification via a sequential Bayes error minimisation with an application to flow meter diagnostics,â€ Expert Systems with Applications (IF: 3.928), September 2017
 
 
+Source:
+
+Kojo Sarfo Gyamfi 
+Coventry University, UK 
+gyamfik '@' uni.coventry.ac.uk 
+
+Craig Marshall 
+National Engineering Laboratory, TUV-NEL, UK 
+Craig.Marsall '@' tuv-sud.co.uk
+
+
+
+
